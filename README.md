@@ -4,7 +4,7 @@
 
 > maven:3.6.1
 
-&emsp;[https://github.com/firekcc/docker-alpine-glibc](https://github.com/firekcc/docker-alpine-glibc)
+ &emsp;[firekcc/java](https://github.com/firekcc/docker-java/blob/master/Dockerfile)
 
  &nbsp;
  
