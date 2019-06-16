@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <localRepository>/root/.m2/repository</localRepository>
+    <servers>
+        <server>
+            <id>maven-snapshots</id>
+            <username>admin</username>
+            <password>admin123</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>docker</id>
+            <activation>
+                <jdk>1.8</jdk>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>maven-public</id>
+                    <name>repository for public artifacts</name>
+                    <url>http://maven.firekcc.cc/repository/maven-public/</url>
+                </repository>
+                <repository>
+                    <id>maven-snapshot</id>
+                    <name>spring-snapshot repository for public artifacts</name>
+                    <url>http://maven.firekcc.cc/repository/maven-public</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>maven-public-plugin</id>
+                    <name>pluginRepository for public artifacts</name>
+                    <url>http://maven.firekcc.cc/repository/maven-public</url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>never</updatePolicy>
+                        <checksumPolicy>warn</checksumPolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <layout>default</layout>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>docker</activeProfile>
+    </activeProfiles>
+</settings>
+
